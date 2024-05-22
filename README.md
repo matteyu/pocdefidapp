@@ -4,10 +4,15 @@
 
 <img width="1401" alt="image" src="https://github.com/matteyu/pocdefidapp/assets/33408292/04018a95-b9cf-4aab-9360-f85a5598a27c">
 
-
 <img width="1401" alt="image" src="https://github.com/matteyu/pocdefidapp/assets/33408292/44d0c707-4d9c-4c38-9673-7ea216699520">
 
-## Setup
+## What this PoC has
+- Metamask SDK integration
+- ability to create a loan (depositing the nft to the loan contract) and in exchange, increases the record count of the loan (NOTE: No erc20 tokens are transferred to the borrower during loan creation.  Extra logic will need to be implemented for that.  This is simply to showcase metamask and infura)
+- repay loan by using erc20 tokens (NOTE: interest logic is not included in this PoC)
+- viewing the token balances based on the connected wallet
+
+## Pre-Req
 - Sign up for an Infura account [here](https://app.infura.io/register).  Ensure you activate the Ethereum Sepolia endpoint after you create a project (along with any other chains you would like to deploy to).
 - Install the metamask browser extension from [here](https://metamask.io/download/)
 
