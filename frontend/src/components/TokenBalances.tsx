@@ -17,8 +17,7 @@ const TokenBalances: React.FC<TokenBalancesProps> = ({ walletAddress }) => {
   useEffect(() => {
     const fetchTokenBalances = async () => {
       if (!walletAddress) return;
-
-      const provider = new ethers.providers.Web3Provider((window as any).ethereum);
+      const provider = new ethers.providers.JsonRpcProvider(process.env.REACT_APP_RPC_URL);
       const erc721Contract = new ethers.Contract(ERC721_CONTRACT_ADDRESS, ERC721TokenABI, provider);
       const erc20Contract = new ethers.Contract(ERC20_CONTRACT_ADDRESS, ERC20TokenABI, provider);
 
