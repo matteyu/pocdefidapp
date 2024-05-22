@@ -1,5 +1,12 @@
 # PoC Borrowing/Lending Platform
 
+<img width="1401" alt="image" src="https://github.com/matteyu/pocdefidapp/assets/33408292/91d21b94-e750-4621-83df-45dd4302a057">
+
+<img width="1401" alt="image" src="https://github.com/matteyu/pocdefidapp/assets/33408292/04018a95-b9cf-4aab-9360-f85a5598a27c">
+
+
+<img width="1401" alt="image" src="https://github.com/matteyu/pocdefidapp/assets/33408292/44d0c707-4d9c-4c38-9673-7ea216699520">
+
 ## Setup
 - Sign up for an Infura account [here](https://app.infura.io/register).  Ensure you activate the Ethereum Sepolia endpoint after you create a project (along with any other chains you would like to deploy to).
 - Install the metamask browser extension from [here](https://metamask.io/download/)
