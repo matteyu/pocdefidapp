@@ -49,6 +49,8 @@ npm start
 ## Deploy Smart Contracts To Sepolia Testnet
 In the file `secrets.json` add your infura project id to `projectId`.  Take the mnemonic phrase of the wallet that you would like to use (for deploying the contracts to testnet) and place it in `mnemonic`.
 
+Ensure you change `REACT_APP_RPC_URL` env var in `frontend/src/.env` to the RPC url from Infura.
+
 Execute the command:
 ```shell
 npx hardhat run --network sepolia scripts/deploy.ts
