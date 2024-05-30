@@ -1,7 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
-import {mnemonic, projectId} from './secrets.json';
+import {privateKey, projectId} from './secrets.json';
 
 
 const config: HardhatUserConfig = {
@@ -13,7 +13,8 @@ const config: HardhatUserConfig = {
     },
     sepolia: {
       url: `https://sepolia.infura.io/v3/${projectId}`,
-      accounts: { mnemonic: mnemonic }
+      accounts: [`0x${privateKey}`],
+      gasPrice: 'auto'
     }
   }
 };
