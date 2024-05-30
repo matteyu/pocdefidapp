@@ -17,9 +17,7 @@ const RepayLoan: React.FC<RepayLoanProps> = ({ walletAddress }) => {
   const handleRepayLoan = async () => {
     if (!walletAddress) return;
 
-    const provider = new ethers.providers.JsonRpcProvider(
-      process.env.REACT_APP_RPC_URL
-    );
+    const provider = new ethers.providers.Web3Provider((window as any).ethereum);
     const signer = provider.getSigner();
     const loanContract = new ethers.Contract(
       LOAN_CONTRACT_ADDRESS,

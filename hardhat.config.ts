@@ -1,11 +1,11 @@
-import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-verify";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
-import {privateKey, projectId} from './secrets.json';
+import { HardhatUserConfig } from "hardhat/config";
+import {privateKey, projectId, etherscanApiKey} from './secrets.json';
 
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.24",
   networks: {
     hardhat: {},
     localhost: {
@@ -16,6 +16,25 @@ const config: HardhatUserConfig = {
       accounts: [`0x${privateKey}`],
       gasPrice: 'auto'
     }
+  },
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.24",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+    ],
+  },
+  etherscan: {
+  	apiKey: etherscanApiKey,
+  },
+  sourcify: {
+    enabled: true
   }
 };
 

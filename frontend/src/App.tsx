@@ -13,8 +13,9 @@ const App: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
+      <div className="py-8"><MetaMaskButton theme={"light"} color="white"></MetaMaskButton></div>
       <h1 className="text-2xl font-bold mb-4">DeFi DApp</h1>
-      {(connected && account) ? (
+      {(connected && account) && (
         <div>
         <p className="mb-4">Connected Wallet: {account}</p>
         <TokenBalances walletAddress={account} />
@@ -22,8 +23,6 @@ const App: React.FC = () => {
         <RepayLoan walletAddress={account} />
         <OutstandingLoans walletAddress={account} />
       </div>
-      ) : (
-        <MetaMaskButton theme={"light"} color="white"></MetaMaskButton>
       )}
     </div>
   );

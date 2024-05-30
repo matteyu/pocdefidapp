@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { MetaMaskUIProvider } from '@metamask/sdk-react-ui';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { MetaMaskUIProvider } from "@metamask/sdk-react-ui";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
@@ -16,7 +16,7 @@ root.render(
           name: "Proof Of Concept dApp",
           url: window.location.href,
         },
-        injectProvider: true
+        injectProvider: true,
       }}
     >
       <App />
